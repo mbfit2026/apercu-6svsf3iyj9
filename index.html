@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,sans-serif;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Eco Phone Nice</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Atelier de réparation de smartphones et tablettes à Nice centre : écran, batterie, connecteur, caméra, toutes marques, sans rendez-vous.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  /* Mise en page : bandeau maquette, en-tête collant, héros sombre avec téléphone 3D éclaté, marques, réparations, devis express, étapes, reconditionnés et accessoires, boutique, formulaire, pied de page, barre d'action mobile. */
+  --bg:#F4F6F2; --surface:#FFFFFF; --ink:#131A16; --muted:#5B685F; --line:#D9DFD8;
+  --brand:#45A52A; --brand-ink:#2E7F19; --brand-soft:#E3F2DA; --brand-on:#FFFFFF;
+  --wrench:#E5472B;
+  --dark:#0D1411; --dark-2:#15201A; --dark-ink:#EEF3EE; --dark-muted:#9DB0A3; --dark-line:#26352D;
+  --f-display:'Bricolage Grotesque','Avenir Next','Helvetica Neue',Arial,sans-serif;
+  --f-body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  --radius:14px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1411; --surface:#15201A; --ink:#EEF3EE; --muted:#9DB0A3; --line:#26352D;
+    --brand:#6CC04A; --brand-ink:#8ED771; --brand-soft:#1A3315; --brand-on:#0D1411;
+    --dark:#080D0B; --dark-2:#101813; --dark-line:#1F2B25;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1411; --surface:#15201A; --ink:#EEF3EE; --muted:#9DB0A3; --line:#26352D;
+  --brand:#6CC04A; --brand-ink:#8ED771; --brand-soft:#1A3315; --brand-on:#0D1411;
+  --dark:#080D0B; --dark-2:#101813; --dark-line:#1F2B25;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,svg{max-width:100%}
+img{height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-weight:800;font-size:clamp(2.05rem,4.3vw,3.3rem)}
+h2{font-weight:800;font-size:clamp(1.65rem,3vw,2.35rem)}
+h3{font-weight:700;font-size:1.1rem}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font:600 .74rem/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brand-ink)}
+.lead{font-size:1.08rem;color:var(--muted);max-width:62ch}
+.nw{white-space:nowrap}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Bandeau maquette */
+.demo-strip{background:var(--dark-2);color:var(--dark-muted);font:500 12px/1.4 var(--f-body);text-align:center;padding-block:5px}
+.demo-strip .wrap{display:flex;gap:6px 14px;justify-content:center;align-items:center;flex-wrap:wrap}
+.demo-strip b{color:var(--brand);font:600 11px/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase}
+
+/* En-tête */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--bg);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.3) blur(10px);-webkit-backdrop-filter:saturate(1.3) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0}
+.brand svg{width:42px;height:42px;flex:none}
+.brand-name{font-family:var(--f-display);font-size:1.2rem;line-height:1;letter-spacing:-.01em;display:block;white-space:nowrap}
+.brand-name b{font-weight:800;color:var(--brand-ink)}
+.brand-name span{font-weight:600}
+.brand-sub{display:block;font:500 .72rem/1.3 var(--f-mono);color:var(--muted);margin-top:3px;letter-spacing:.02em}
+.top nav{display:none;gap:18px;font-weight:600;font-size:.93rem}
+.top nav a{text-decoration:none;color:var(--muted);white-space:nowrap}
+.brand-sub{white-space:nowrap}
+.top nav a:hover{color:var(--ink)}
+.top .btn{padding:10px 16px}
+.top .btn .lbl{display:none}
+@media (max-width:519px){.top .brand-sub{display:none} .top .btn{width:44px;height:44px;padding:0;border-radius:50%} .top .btn .num{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}
+@media (min-width:1100px){.top nav{display:flex}}
+@media (min-width:1240px){.top .btn .lbl{display:inline}}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font:600 .97rem/1.2 var(--f-body);text-decoration:none;padding:13px 20px;border-radius:12px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,background .15s,border-color .15s,color .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--brand);color:var(--brand-on);border-color:var(--brand)}
+.btn-primary:hover{background:var(--brand-ink);border-color:var(--brand-ink)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:var(--surface)}
+.btn-ghost:hover{border-color:var(--brand)}
+.btn-ink{background:var(--ink);color:var(--bg);font-family:var(--f-mono);font-weight:600;letter-spacing:.01em}
+.btn-ink:hover{background:var(--brand-ink);color:var(--brand-on)}
+.btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* Héros */
+.hero{background:var(--dark);color:var(--dark-ink);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-20%;top:-10%;width:70%;height:120%;background:radial-gradient(closest-side,rgba(108,192,74,.22),transparent 72%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:44px;padding-block:clamp(36px,5.5vw,64px);align-items:center}
+@media (min-width:960px){.hero .wrap{grid-template-columns:1.05fr .95fr;gap:56px}}
+.hero .eyebrow{color:var(--brand)}
+.hero h1{margin-top:16px}
+.hero .lead{color:var(--dark-muted);margin-top:18px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero .btn-ghost{border-color:var(--dark-line);color:var(--dark-ink);background:transparent}
+.hero .btn-ghost:hover{border-color:var(--brand)}
+.status{display:inline-flex;align-items:center;gap:9px;font:500 .86rem/1.3 var(--f-mono);color:var(--dark-muted);margin-top:20px}
+.status .dot{width:9px;height:9px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(108,192,74,.18);flex:none}
+.status.closed .dot{background:var(--dark-muted);box-shadow:none}
+.trust{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 24px;margin-top:36px;padding-top:28px;border-top:1px solid var(--dark-line)}
+@media (min-width:560px){.trust{grid-template-columns:repeat(4,1fr)}}
+.trust b{display:block;font:800 1.3rem/1.1 var(--f-display);color:var(--dark-ink);letter-spacing:-.01em}
+.trust span{display:block;font-size:.84rem;color:var(--dark-muted);margin-top:5px;line-height:1.4}
+
+/* Scène 3D */
+.stage{position:relative;aspect-ratio:4/5;max-height:620px;width:100%;max-width:100%;margin:0 auto}
+@media (min-width:960px){.stage{aspect-ratio:5/6}}
+.stage canvas{position:absolute;inset:0;width:100%!important;height:100%!important;display:block;touch-action:pan-y;cursor:grab}
+.stage canvas:active{cursor:grabbing}
+.stage-shadow{position:absolute;left:50%;bottom:9%;width:56%;height:7%;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(0,0,0,.65),transparent);filter:blur(5px);pointer-events:none}
+.stage-fallback{position:absolute;inset:0;display:grid;place-items:center}
+.stage-fallback svg{width:46%;height:auto}
+.legend{position:absolute;left:0;bottom:0;display:grid;gap:9px;pointer-events:none}
+.legend li{font:500 .76rem/1.2 var(--f-mono);color:var(--dark-muted);display:flex;align-items:center;gap:9px;opacity:.5;transition:opacity .5s,color .5s}
+.legend li::before{content:"";width:16px;height:1.5px;background:currentColor;flex:none}
+.legend.on li{opacity:1;color:var(--dark-ink)}
+.legend.on li:nth-child(1){transition-delay:.05s}.legend.on li:nth-child(2){transition-delay:.15s}.legend.on li:nth-child(3){transition-delay:.25s}.legend.on li:nth-child(4){transition-delay:.35s}
+.stage-tools{position:absolute;right:0;bottom:0;display:flex;gap:8px;align-items:center}
+.btn-mini{font:600 .78rem/1 var(--f-mono);padding:10px 13px;border-radius:999px;border:1px solid var(--dark-line);background:rgba(13,20,17,.55);color:var(--dark-ink);cursor:pointer;backdrop-filter:blur(6px)}
+.btn-mini:hover,.btn-mini[aria-pressed="true"]{border-color:var(--brand);color:var(--brand)}
+.stage-hint{position:absolute;left:0;top:0;font:500 .72rem/1.3 var(--f-mono);color:var(--dark-muted);display:flex;gap:8px;align-items:center}
+.stage-hint svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* Marques */
+.brands{border-bottom:1px solid var(--line);background:var(--surface)}
+.brands .wrap{display:flex;gap:10px 12px;flex-wrap:wrap;align-items:center;padding-block:18px}
+.brands .lbl{font:600 .72rem/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:8px}
+.chip{font:600 .85rem/1 var(--f-body);padding:9px 13px;border-radius:999px;border:1px solid var(--line);color:var(--ink);background:var(--bg)}
+
+/* Sections */
+section{padding-block:clamp(56px,8vw,96px)}
+.sec-head{display:grid;gap:14px;max-width:70ch;margin-bottom:clamp(28px,4vw,44px)}
+.sec-head h2{margin-top:2px}
+.band{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:grid;gap:12px;align-content:start;min-width:0;grid-template-rows:auto auto 1fr auto}
+.band .card{background:var(--bg)}
+.card .ico{width:44px;height:44px;border-radius:12px;background:var(--brand-soft);color:var(--brand-ink);display:grid;place-items:center}
+.card .ico svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card p{color:var(--muted);font-size:.95rem}
+.card .tag{font:500 .74rem/1.4 var(--f-mono);color:var(--muted);padding-top:6px;border-top:1px dashed var(--line)}
+
+/* Devis express */
+.picker{display:grid;gap:28px}
+@media (min-width:900px){.picker{grid-template-columns:1.1fr .9fr;align-items:start}}
+.step{display:grid;gap:10px;margin-bottom:24px}
+.step-l{font:600 .72rem/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{font:600 .88rem/1 var(--f-body);padding:10px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--brand)}
+.opt[aria-pressed="true"]{border-color:var(--brand);background:var(--brand-soft);color:var(--brand-ink)}
+.model-free{display:grid;gap:6px}
+.result{background:var(--dark);color:var(--dark-ink);border-radius:var(--radius);padding:26px;display:grid;gap:16px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 86px)}
+.result .k{font:500 .76rem/1.3 var(--f-mono);color:var(--dark-muted);letter-spacing:.06em;text-transform:uppercase}
+.result h3{font-size:1.45rem;font-weight:800;letter-spacing:-.01em}
+.result .what{color:var(--dark-muted);font-size:.95rem}
+.result ul{display:grid;gap:9px;font-size:.93rem;color:var(--dark-ink)}
+.result li{display:flex;gap:10px;align-items:flex-start}
+.result li svg{width:18px;height:18px;flex:none;stroke:var(--brand);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;margin-top:3px}
+.result .ctas{display:flex;gap:10px;flex-wrap:wrap;padding-top:4px}
+.result .btn-ghost{border-color:var(--dark-line);color:var(--dark-ink);background:transparent}
+.result .fine{font:500 .74rem/1.4 var(--f-mono);color:var(--dark-muted)}
+
+/* Étapes */
+.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.stp{padding:22px;display:grid;gap:10px;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--brand);border-radius:var(--radius);min-width:0}
+.stp .n{font:600 .76rem/1 var(--f-mono);color:var(--brand-ink);letter-spacing:.08em}
+.stp p{color:var(--muted);font-size:.95rem}
+
+/* Reconditionnés et accessoires */
+.duo{display:grid;gap:16px}
+@media (min-width:860px){.duo{grid-template-columns:1fr 1fr}}
+.panel{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:var(--bg);display:grid;gap:14px;align-content:start;min-width:0}
+.panel.dark{background:var(--dark);color:var(--dark-ink);border-color:var(--dark)}
+.panel p{color:var(--muted);font-size:.97rem}
+.panel.dark p{color:var(--dark-muted)}
+.panel .eyebrow{margin-bottom:2px}
+.panel.dark .eyebrow{color:var(--brand)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips .chip{font-size:.82rem}
+.panel.dark .btn-ghost{border-color:var(--dark-line);color:var(--dark-ink);background:transparent}
+.recond-list{display:grid;gap:10px;font-size:.95rem}
+.recond-list li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--dark-line);color:var(--dark-ink)}
+.recond-list li span:last-child{font-family:var(--f-mono);font-size:.8rem;color:var(--dark-muted);text-align:right}
+
+/* Boutique */
+.shop{display:grid;gap:16px}
+@media (min-width:900px){.shop{grid-template-columns:1.1fr .9fr}}
+.shop .panel{background:var(--surface)}
+.band .shop .panel{background:var(--bg)}
+.addr{font:700 1.15rem/1.35 var(--f-display);letter-spacing:-.01em}
+.access{display:grid;gap:9px;font-size:.95rem;color:var(--muted)}
+.access li{display:flex;gap:10px;align-items:flex-start}
+.access svg{width:18px;height:18px;flex:none;stroke:var(--brand-ink);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;margin-top:3px}
+.map{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:block}
+.map text{font-family:var(--f-mono);font-size:10.5px;fill:var(--muted)}
+.map .road{stroke:var(--line);stroke-linecap:round}
+.map .tram{stroke:var(--brand);stroke-dasharray:3 5;stroke-linecap:round}
+.map .blk{fill:var(--bg);stroke:var(--line)}
+.map .here{fill:var(--wrench)}
+.map .lbl-strong{fill:var(--ink);font-weight:600}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.hours td:last-child{text-align:right;font-family:var(--f-mono);font-size:.86rem}
+.hours tr.today td{font-weight:700;color:var(--brand-ink)}
+.hours tr.today td:first-child::after{content:" · aujourd’hui";font:500 .72rem/1 var(--f-mono);letter-spacing:.04em}
+.hours tr.off td:last-child{color:var(--muted)}
+.contact-line{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--line)}
+.contact-line .v{font:500 .95rem/1.3 var(--f-mono);user-select:all;word-break:break-all}
+.contact-line .l{display:block;font:600 .7rem/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.copy{font:600 .72rem/1 var(--f-mono);padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--muted);cursor:pointer}
+.copy:hover{border-color:var(--brand);color:var(--brand-ink)}
+.socials{display:flex;gap:10px;flex-wrap:wrap;padding-top:6px}
+.socials a{display:inline-flex;align-items:center;gap:8px;font:600 .85rem/1 var(--f-body);text-decoration:none;padding:10px 13px;border-radius:999px;border:1px solid var(--line);background:var(--bg)}
+.socials svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.socials a:hover{border-color:var(--brand)}
+
+/* Formulaire */
+.form-grid{display:grid;gap:28px}
+@media (min-width:900px){.form-grid{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.form{display:grid;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.f2{display:grid;gap:14px}
+@media (min-width:600px){.f2{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:6px;font:600 .85rem/1.3 var(--f-body)}
+input,select,textarea{font:400 1rem/1.4 var(--f-body);padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);width:100%;min-width:0}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px var(--brand-soft)}
+textarea{min-height:110px;resize:vertical}
+.hint{font:500 .76rem/1.4 var(--f-mono);color:var(--muted)}
+.ok{display:grid;gap:10px;padding:26px;border-radius:var(--radius);background:var(--brand-soft);color:var(--brand-ink)}
+.ok h3{color:var(--brand-ink)}
+.ok p{color:var(--ink);font-size:.95rem}
+.aside{display:grid;gap:18px}
+.aside .big{font:800 clamp(1.6rem,3vw,2.1rem)/1.05 var(--f-display);letter-spacing:-.02em}
+.aside .call{font:600 1.35rem/1.2 var(--f-mono);color:var(--brand-ink);text-decoration:none}
+.aside p{color:var(--muted)}
+
+/* Pied de page */
+footer{background:var(--dark);color:var(--dark-muted);padding-block:52px 118px}
+@media (min-width:760px){footer{padding-bottom:52px}}
+.fgrid{display:grid;gap:30px}
+@media (min-width:760px){.fgrid{grid-template-columns:1.5fr 1fr 1fr 1fr}}
+footer .brand-name b{color:var(--brand)}
+footer .brand-name span{color:var(--dark-ink)}
+footer .brand-sub{color:var(--dark-muted)}
+footer .about{font-size:.93rem;max-width:36ch;margin-top:14px}
+footer h4{margin:0 0 12px;font:600 .72rem/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dark-ink)}
+footer ul{display:grid;gap:9px;font-size:.93rem}
+footer a{text-decoration:none}
+footer a:hover{color:var(--dark-ink)}
+.fbot{margin-top:40px;padding-top:20px;border-top:1px solid var(--dark-line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:500 .8rem/1.5 var(--f-mono)}
+
+/* Barre d'action mobile */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));background:var(--bg);background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.mbar .btn{padding:12px 10px;font-size:.92rem}
+@media (min-width:760px){.mbar{display:none}}
+</style>
+
+<div class="demo-strip" role="note"><div class="wrap"><b>Maquette</b><span>Proposition de nouveau site pour Eco Phone</span></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#haut" aria-label="Eco Phone, accueil">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="var(--brand)"/><rect x="19" y="10" width="14" height="27" rx="3.2" fill="#fff"/><rect x="23.5" y="13" width="5" height="1.6" rx=".8" fill="var(--brand)"/><circle cx="26" cy="33" r="1.4" fill="var(--brand)"/><g transform="rotate(-38 17 29)"><rect x="15.5" y="22" width="3.2" height="15" rx="1.6" fill="var(--wrench)"/><circle cx="17.1" cy="19.5" r="4.4" fill="var(--wrench)"/><rect x="15.6" y="13.6" width="3" height="4.4" fill="var(--brand)"/></g></svg>
+      <span><span class="brand-name"><b>ECO</b> <span>PHONE</span></span><span class="brand-sub">Réparation smartphone · Nice</span></span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#reparations">Réparations</a>
+      <a href="#devis-express">Devis express</a>
+      <a href="#occasion">Reconditionnés</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#devis">Contact</a>
+    </nav>
+    <a class="btn btn-ink" href="tel:+33493925414"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="lbl">Appeler&nbsp;:&nbsp;</span><span class="num">04 93 92 54 14</span></a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="hero" aria-labelledby="titre">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Atelier de réparation · 9 av. Georges Clemenceau, Nice</p>
+        <h1 id="titre">Écran cassé, batterie à plat&nbsp;? Réparation express, sans rendez-vous.</h1>
+        <p class="lead">Depuis plus de dix ans, Eco Phone répare les smartphones et tablettes de toutes marques, à deux pas de Nice Étoile et du tram Jean-Médecin. Devis gratuit avant toute réparation, garantie un an.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#devis-express">Obtenir un devis gratuit</a>
+          <a class="btn btn-ghost" href="#reparations">Voir les réparations</a>
+        </div>
+        <p class="status" id="status"><span class="dot" aria-hidden="true"></span><span id="status-txt">Lun.–ven. 08:30–19:00 · dim. 11:00–19:00</span></p>
+        <ul class="trust" aria-label="Repères">
+          <li><b>+10 ans</b><span>d’atelier à Nice centre</span></li>
+          <li><b>Sans RDV</b><span>passez quand vous voulez</span></li>
+          <li><b>Devis gratuit</b><span>avant toute réparation</span></li>
+          <li><b>Garantie 1 an</b><span>sur chaque réparation, facture faisant foi</span></li>
+        </ul>
+      </div>
+      <div class="stage" id="stage" aria-label="Vue 3D d’un smartphone en pièces détachées&nbsp;: écran, batterie, carte mère, châssis">
+        <div class="stage-shadow" aria-hidden="true"></div>
+        <canvas id="phone3d" aria-hidden="true"></canvas>
+        <div class="stage-fallback" id="stage-fallback" hidden aria-hidden="true">
+          <svg viewBox="0 0 220 440" fill="none" stroke="var(--dark-muted)" stroke-width="3"><rect x="40" y="60" width="150" height="320" rx="30" fill="var(--dark-2)"/><rect x="25" y="40" width="150" height="320" rx="30" fill="var(--dark)" stroke="var(--brand)"/><rect x="58" y="78" width="84" height="150" rx="10" stroke="var(--dark-line)"/><circle cx="100" cy="330" r="14" stroke="var(--brand)"/></svg>
+        </div>
+        <p class="stage-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11V5a1.5 1.5 0 0 1 3 0v6M12 10a1.5 1.5 0 0 1 3 0v2M15 11a1.5 1.5 0 0 1 3 0v4a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3.4 15a1.6 1.6 0 0 1 2.6-1.8L9 15"/></svg>Glissez pour faire tourner</p>
+        <ul class="legend" id="legend" aria-hidden="true"><li>Écran</li><li>Batterie</li><li>Carte mère</li><li>Châssis</li></ul>
+        <div class="stage-tools"><button class="btn-mini" id="explode" type="button" aria-pressed="false">Vue éclatée</button></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="brands" aria-label="Marques réparées">
+    <div class="wrap">
+      <span class="lbl">Nous réparons</span>
+      <span class="chip">Apple iPhone</span><span class="chip">iPad</span><span class="chip">Samsung Galaxy</span><span class="chip">Huawei</span><span class="chip">Xiaomi</span><span class="chip">Oppo</span><span class="chip">Sony</span><span class="chip">Wiko</span><span class="chip">Honor</span><span class="chip">Nokia</span>
+    </div>
+  </div>
+
+  <section id="reparations" aria-labelledby="t-rep">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Réparations</p>
+        <h2 id="t-rep">Toutes les pannes du quotidien, réparées à l’atelier</h2>
+        <p class="lead">Pièces compatibles, réparation garantie un an, facture faisant foi. Le devis vous est communiqué le jour du diagnostic.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M9 7l3 4-2 3 3 4"/></svg></div>
+          <h3>Écran cassé</h3>
+          <p>Vitre fissurée, tactile qui ne répond plus, taches ou lignes sur l’image&nbsp;: remplacement du bloc écran complet.</p>
+          <p class="tag">iPhone 6 → 13 · SE · Samsung · Huawei · Xiaomi</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="16" height="10" rx="2"/><path d="M19 10h2v4h-2M11 9l-2 3h3l-2 3"/></svg></div>
+          <h3>Batterie</h3>
+          <p>Autonomie en chute libre, téléphone qui s’éteint à 30&nbsp;%, charge qui ne tient plus&nbsp;: batterie neuve et test de charge.</p>
+          <p class="tag">iPhone 6 → 13 · SE · toutes marques</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="9" width="14" height="7" rx="3.5"/><path d="M9 12.5h6M12 16v5M12 3v6"/></svg></div>
+          <h3>Connecteur de charge</h3>
+          <p>Le câble tient mal, la charge est lente ou intermittente&nbsp;: nettoyage du port ou remplacement du connecteur.</p>
+          <p class="tag">Lightning · USB-C · micro-USB</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/><circle cx="16.5" cy="8" r=".8" fill="currentColor"/></svg></div>
+          <h3>Caméra</h3>
+          <p>Photo floue, point noir, application qui se ferme, vitre de caméra brisée&nbsp;: module avant ou arrière remplacé.</p>
+          <p class="tag">iPhone 6 → 13 · Samsung · Huawei</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5zM15.5 9.5a3.5 3.5 0 0 1 0 5M18 7a7 7 0 0 1 0 10"/></svg></div>
+          <h3>Son et micro</h3>
+          <p>Interlocuteur inaudible, haut-parleur qui grésille, micro muet&nbsp;: écouteur interne, haut-parleur ou micro remplacé.</p>
+          <p class="tag">iPhone 6 → 13 · toutes marques</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><circle cx="12" cy="17.5" r="1.6"/><path d="M19.5 8v3M19.5 13v3"/></svg></div>
+          <h3>Boutons</h3>
+          <p>Bouton home, volume ou marche/arrêt enfoncé, coincé ou sans réponse.</p>
+          <p class="tag">Toutes marques</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2.5l7 3v6c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10v-6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Verre trempé posé</h3>
+          <p>Pose en boutique pour protéger l’écran neuf. Coques et étuis assortis en rayon.</p>
+          <p class="tag">En boutique</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="12" cy="17" r="1"/><path d="M7 8h10"/></svg></div>
+          <h3>Tablettes iPad</h3>
+          <p>Écran, batterie, connecteur&nbsp;: demandez-nous pour votre tablette.</p>
+          <p class="tag">Sur devis, selon le modèle</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 3 10 2.5-7 1.5 2h5"/></svg></div>
+          <h3>Diagnostic</h3>
+          <p>Ne s’allume plus, chauffe, redémarre en boucle&nbsp;? On identifie la panne et on vous dit si la réparation vaut le coup.</p>
+          <p class="tag">Devis gratuit · sans engagement</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="devis-express" class="band" aria-labelledby="t-devis">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Devis express</p>
+        <h2 id="t-devis">Dites-nous quel appareil, quelle panne</h2>
+        <p class="lead">Trois choix, et l’atelier vous répond avec un devis gratuit. Aucune réparation n’est lancée sans votre accord sur le devis.</p>
+      </div>
+      <div class="picker">
+        <div>
+          <div class="step">
+            <p class="step-l">1 · Marque</p>
+            <div class="opts" id="brand-opts" role="group" aria-label="Marque"></div>
+          </div>
+          <div class="step">
+            <p class="step-l">2 · Modèle</p>
+            <div class="opts" id="model-opts" role="group" aria-label="Modèle"></div>
+            <div class="model-free" id="model-free" hidden>
+              <label for="model-input"><span class="sr">Modèle</span><input id="model-input" type="text" placeholder="Ex. Galaxy S21, P30 Pro, Redmi Note 11…" autocomplete="off"></label>
+            </div>
+          </div>
+          <div class="step" style="margin-bottom:0">
+            <p class="step-l">3 · Panne</p>
+            <div class="opts" id="fault-opts" role="group" aria-label="Panne"></div>
+          </div>
+        </div>
+        <aside class="result" aria-live="polite">
+          <p class="k">Votre réparation</p>
+          <h3 id="r-title">iPhone 13 · Écran</h3>
+          <p class="what" id="r-what">Remplacement du bloc écran complet, vitre tactile et dalle ensemble.</p>
+          <ul id="r-list"></ul>
+          <div class="ctas">
+            <a class="btn btn-primary" href="#devis" id="r-send">Compléter ma demande</a>
+            <a class="btn btn-ghost" href="tel:+33493925414">04 93 92 54 14</a>
+          </div>
+          <p class="fine">Devis gratuit · réparation le jour même sous réserve de disponibilité des pièces · garantie 1 an, facture faisant foi</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-etapes">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Comment ça se passe</p>
+        <h2 id="t-etapes">Trois étapes, un seul passage</h2>
+      </div>
+      <ol class="steps">
+        <li class="stp"><p class="n">ÉTAPE 1</p><h3>Vous passez à l’atelier</h3><p>Sans rendez-vous, au 9 avenue Georges Clemenceau, arrêt de tram Jean-Médecin. Vous pouvez aussi nous appeler ou envoyer une demande avant de venir.</p></li>
+        <li class="stp"><p class="n">ÉTAPE 2</p><h3>Diagnostic et devis gratuit</h3><p>L’atelier examine l’appareil et vous communique le devis le jour même. Aucune réparation n’est lancée sans votre accord.</p></li>
+        <li class="stp"><p class="n">ÉTAPE 3</p><h3>Réparation express</h3><p>Réparation le jour du dépôt, sous réserve de disponibilité des pièces. Chaque réparation est garantie un an, la facture faisant foi.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="occasion" class="band" aria-labelledby="t-occ">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">En boutique</p>
+        <h2 id="t-occ">Reconditionnés et accessoires</h2>
+      </div>
+      <div class="duo">
+        <article class="panel dark">
+          <p class="eyebrow">Smartphones reconditionnés</p>
+          <h3>Changer de téléphone sans payer le prix du neuf</h3>
+          <p>iPhone, Samsung Galaxy, Huawei reconditionnés, avec les bons conseils pour choisir le bon modèle.</p>
+          <ul class="recond-list" aria-label="Gammes disponibles">
+            <li><span>Apple iPhone</span><span>selon arrivages</span></li>
+            <li><span>Samsung Galaxy</span><span>selon arrivages</span></li>
+            <li><span>Huawei</span><span>selon arrivages</span></li>
+          </ul>
+          <div><a class="btn btn-ghost" href="#devis" id="recond-ask">Demander les disponibilités</a></div>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">Accessoires</p>
+          <h3>Les indispensables pour protéger, recharger et écouter</h3>
+          <p>Un large choix en rayon, adapté à votre modèle. Les protections d’écran sont posées sur place.</p>
+          <div class="chips">
+            <span class="chip">Coques et étuis</span><span class="chip">Verre trempé</span><span class="chip">Câbles USB</span><span class="chip">Chargeurs secteur</span><span class="chip">Chargeurs voiture</span><span class="chip">Chargeurs à induction</span><span class="chip">MagSafe</span><span class="chip">Chargeurs Apple Watch</span><span class="chip">Batteries externes</span><span class="chip">Stations de charge</span><span class="chip">Adaptateurs voyage</span><span class="chip">Écouteurs filaires</span><span class="chip">Écouteurs sans fil</span><span class="chip">Casques Bluetooth</span><span class="chip">Enceintes</span><span class="chip">Câbles jack</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="boutique" aria-labelledby="t-shop">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">La boutique</p>
+        <h2 id="t-shop">À deux pas de Nice Étoile et du tram Jean-Médecin</h2>
+      </div>
+      <div class="shop">
+        <div class="panel">
+          <p class="addr">9 avenue Georges Clemenceau<br>06000 Nice</p>
+          <ul class="access">
+            <li><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="15" rx="3"/><path d="M5 11h14M9 18l-1.5 3M15 18l1.5 3M9 7h6"/></svg><span>Tram&nbsp;: arrêt Jean-Médecin, en face de Nice Étoile</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg><span>Repères&nbsp;: Monoprix Jean-Médecin, Café de Lyon, Poste Notre-Dame, place Masséna à quelques minutes à pied</span></li>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Sans rendez-vous aux heures d’ouverture</span></li>
+          </ul>
+          <svg class="map" viewBox="0 0 420 240" role="img" aria-label="Plan schématique&nbsp;: l’avenue Georges Clemenceau rejoint l’avenue Jean-Médecin et le tram, à hauteur de Nice Étoile">
+            <rect x="0" y="0" width="420" height="240" fill="var(--surface)"/>
+            <line class="road" x1="262" y1="0" x2="262" y2="240" stroke-width="26"/>
+            <line class="tram" x1="262" y1="0" x2="262" y2="240" stroke-width="2.5"/>
+            <line class="road" x1="0" y1="128" x2="262" y2="128" stroke-width="18"/>
+            <line class="road" x1="262" y1="128" x2="420" y2="128" stroke-width="12"/>
+            <rect class="blk" x="290" y="62" width="112" height="56" rx="6"/>
+            <text x="346" y="86" text-anchor="middle" class="lbl-strong">Nice Étoile</text>
+            <text x="346" y="102" text-anchor="middle">centre commercial</text>
+            <rect class="blk" x="290" y="10" width="112" height="40" rx="6"/>
+            <text x="346" y="35" text-anchor="middle">Monoprix</text>
+            <circle cx="262" cy="104" r="7" fill="var(--surface)" stroke="var(--brand)" stroke-width="3"/>
+            <text x="246" y="80" text-anchor="end">Tram · Jean-Médecin</text>
+            <text x="246" y="164" text-anchor="end">Café de Lyon</text>
+            <text x="20" y="150">Av. Georges Clemenceau</text>
+            <text x="20" y="232">← vers Gambetta</text>
+            <text x="276" y="232">vers place Masséna ↓</text>
+            <text x="246" y="18" text-anchor="end">vers gare Thiers ↑</text>
+            <circle class="here" cx="178" cy="118" r="9"/>
+            <circle cx="178" cy="118" r="3.5" fill="#fff"/>
+            <text x="178" y="104" text-anchor="middle" class="lbl-strong">Eco Phone · n° 9</text>
+            </svg>
+          <p class="hint">Plan schématique, non à l’échelle.</p>
+          <div><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Eco+Phone+9+avenue+Georges+Clemenceau+06000+Nice" target="_blank" rel="noopener">Itinéraire sur Google Maps</a></div>
+        </div>
+        <div class="panel">
+          <p class="eyebrow">Horaires</p>
+          <table class="hours" id="hours">
+            <tbody>
+              <tr data-day="1"><td>Lundi</td><td>08:30–19:00</td></tr>
+              <tr data-day="2"><td>Mardi</td><td>08:30–19:00</td></tr>
+              <tr data-day="3"><td>Mercredi</td><td>08:30–19:00</td></tr>
+              <tr data-day="4"><td>Jeudi</td><td>08:30–19:00</td></tr>
+              <tr data-day="5"><td>Vendredi</td><td>08:30–19:00</td></tr>
+              <tr data-day="6" class="off"><td>Samedi</td><td>Fermé</td></tr>
+              <tr data-day="0"><td>Dimanche</td><td>11:00–19:00</td></tr>
+            </tbody>
+          </table>
+          <p class="eyebrow" style="margin-top:10px">Contact</p>
+          <div class="contact-line"><div><span class="l">Téléphone · prix d’un appel local</span><span class="v">04 93 92 54 14</span></div><button class="copy" type="button" data-copy="04 93 92 54 14">Copier</button></div>
+          <div class="contact-line"><div><span class="l">E-mail</span><span class="v">contact@reparation-smartphone.eu</span></div><button class="copy" type="button" data-copy="contact@reparation-smartphone.eu">Copier</button></div>
+          <div class="socials">
+            <a href="https://www.facebook.com/reparation.iphone.nice06" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>Facebook</a>
+            <a href="https://www.instagram.com/ecophone06/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="devis" class="band" aria-labelledby="t-form">
+    <div class="wrap">
+      <div class="form-grid">
+        <div class="aside">
+          <p class="eyebrow">Demande de devis</p>
+          <p class="big" id="t-form">On vous rappelle avec un devis gratuit.</p>
+          <p>Décrivez la panne en deux lignes. L’atelier vous rappelle aux heures d’ouverture, par téléphone ou par e-mail si vous le préférez. Vous voulez parler à quelqu’un tout de suite&nbsp;?</p>
+          <a class="call" href="tel:+33493925414">04 93 92 54 14</a>
+          <p class="hint">Lundi–vendredi 08:30–19:00 · dimanche 11:00–19:00 · prix d’un appel local</p>
+        </div>
+        <form class="form" id="form" novalidate>
+          <div class="f2">
+            <label for="f-name">Votre nom<input id="f-name" name="nom" type="text" autocomplete="name" required></label>
+            <label for="f-phone">Téléphone pour vous rappeler<input id="f-phone" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+          </div>
+          <div class="f2">
+            <label for="f-email">E-mail (facultatif)<input id="f-email" name="email" type="email" autocomplete="email" inputmode="email"></label>
+            <label for="f-device">Appareil (marque et modèle)<input id="f-device" name="appareil" type="text" value="Apple iPhone 13" required></label>
+          </div>
+          <div>
+            <label for="f-fault">Objet de la demande<select id="f-fault" name="panne">
+              <option value="ecran">Écran</option><option value="batterie">Batterie</option><option value="connecteur">Connecteur de charge</option><option value="camera">Caméra</option><option value="son">Son / micro</option><option value="bouton">Bouton</option><option value="recond">Smartphone reconditionné</option><option value="autre">Autre</option>
+            </select></label>
+          </div>
+          <label for="f-msg">Précisions (facultatif)<textarea id="f-msg" name="message" placeholder="Depuis quand, ce qui s’est passé, si l’appareil s’allume encore…"></textarea></label>
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between">
+            <p class="hint">Vos coordonnées servent uniquement à vous répondre.</p>
+            <button class="btn btn-primary" type="submit">Envoyer ma demande</button>
+          </div>
+          <p class="hint" id="f-err" hidden role="alert"></p>
+        </form>
+        <div class="ok" id="ok" hidden>
+          <h3>Demande enregistrée (démonstration)</h3>
+          <p id="ok-txt"></p>
+          <p class="hint">Maquette&nbsp;: sur le site en ligne, cette demande arrive directement dans la boîte e-mail de l’atelier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <span class="brand"><span class="brand-name"><b>ECO</b> <span>PHONE</span></span></span>
+        <span class="brand-sub">Réparation smartphone et tablette · Nice</span>
+        <p class="about">Atelier de réparation de téléphones et tablettes à Nice centre depuis plus de dix ans. Réparation express, sans rendez-vous, toutes marques.</p>
+      </div>
+      <div>
+        <h4>Réparations</h4>
+        <ul><li><a href="#reparations">Écran</a></li><li><a href="#reparations">Batterie</a></li><li><a href="#reparations">Connecteur de charge</a></li><li><a href="#reparations">Caméra, son, boutons</a></li><li><a href="#reparations">Tablettes iPad</a></li></ul>
+      </div>
+      <div>
+        <h4>Boutique</h4>
+        <ul><li><a href="#occasion">Smartphones reconditionnés</a></li><li><a href="#occasion">Accessoires</a></li><li><a href="#boutique">Horaires et accès</a></li><li><a href="#devis">Demander un devis</a></li></ul>
+      </div>
+      <div>
+        <h4>Informations</h4>
+        <ul><li><a href="#haut">Mentions légales</a></li><li><a href="#haut">Conditions générales</a></li><li><a href="#haut">Confidentialité</a></li><li><a href="https://www.facebook.com/reparation.iphone.nice06" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/ecophone06/" target="_blank" rel="noopener">Instagram</a></li></ul>
+      </div>
+    </div>
+    <div class="fbot"><span>© 2026 Eco Phone · 9 avenue Georges Clemenceau, 06000 Nice</span><span>04 93 92 54 14 · contact@reparation-smartphone.eu</span></div>
+  </div>
+</footer>
+
+<div class="mbar" aria-label="Actions rapides">
+  <a class="btn btn-ink" href="tel:+33493925414">Appeler</a>
+  <a class="btn btn-primary" href="#devis-express">Devis gratuit</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Eco Phone","description":"Atelier de réparation de smartphones et tablettes à Nice centre, sans rendez-vous.","telephone":"+33493925414","email":"contact@reparation-smartphone.eu","address":{"@type":"PostalAddress","streetAddress":"9 avenue Georges Clemenceau","postalCode":"06000","addressLocality":"Nice","addressCountry":"FR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:30","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:00","closes":"19:00"}],"sameAs":["https://www.facebook.com/reparation.iphone.nice06","https://www.instagram.com/ecophone06/"]}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  'use strict';
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  /* ---------- Horaires et statut d'ouverture (heure de Paris) ---------- */
+  var HOURS={1:['08:30','19:00'],2:['08:30','19:00'],3:['08:30','19:00'],4:['08:30','19:00'],5:['08:30','19:00'],6:null,0:['11:00','19:00']};
+  var DAYN=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+  function parisNow(){
+    try{
+      var f=new Intl.DateTimeFormat('en-US',{timeZone:'Europe/Paris',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
+      var p={}; f.formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});
+      var wd=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);
+      var h=parseInt(p.hour,10)%24, m=parseInt(p.minute,10);
+      if(wd<0||isNaN(h)||isNaN(m)) throw 0;
+      return {wd:wd,min:h*60+m};
+    }catch(e){ var d=new Date(); return {wd:d.getDay(),min:d.getHours()*60+d.getMinutes()}; }
+  }
+  function toMin(s){var a=s.split(':');return (+a[0])*60+(+a[1])}
+  function openStatus(){
+    var n=parisNow(), h=HOURS[n.wd];
+    if(h && n.min>=toMin(h[0]) && n.min<toMin(h[1])) return {open:true,text:'Ouvert en ce moment · ferme à '+h[1]};
+    if(h && n.min<toMin(h[0])) return {open:false,text:'Fermé · ouvre aujourd’hui à '+h[0]};
+    for(var i=1;i<=7;i++){var d=(n.wd+i)%7; if(HOURS[d]) return {open:false,text:'Fermé · ouvre '+(i===1?'demain':DAYN[d])+' à '+HOURS[d][0]};}
+    return {open:false,text:'Fermé'};
+  }
+  (function(){
+    var s=openStatus(), el=$('#status'), t=$('#status-txt');
+    if(el&&t){ t.textContent=s.text; el.classList.toggle('closed',!s.open); }
+    var wd=parisNow().wd, row=$('#hours tr[data-day="'+wd+'"]'); if(row) row.classList.add('today');
+  })();
+
+  /* ---------- Devis express ---------- */
+  var BRANDS=[['apple','Apple iPhone'],['ipad','iPad'],['samsung','Samsung'],['huawei','Huawei'],['xiaomi','Xiaomi'],['autre','Autre marque']];
+  var MODELS={
+    apple:['iPhone 6','iPhone 6 Plus','iPhone 6S','iPhone 6S Plus','iPhone SE (2016)','iPhone 7','iPhone 7 Plus','iPhone 8','iPhone 8 Plus','iPhone X','iPhone XR','iPhone XS','iPhone XS Max','iPhone 11','iPhone 11 Pro','iPhone 11 Pro Max','iPhone 12 mini','iPhone 12','iPhone 12 Pro','iPhone 12 Pro Max','iPhone 13 mini','iPhone 13','iPhone 13 Pro','iPhone 13 Pro Max','Autre iPhone']
+  };
+  var FAULTS=[['ecran','Écran'],['batterie','Batterie'],['connecteur','Connecteur de charge'],['camera','Caméra'],['son','Son / micro'],['bouton','Bouton'],['autre','Autre panne']];
+  var FAULT_TXT={
+    ecran:{w:'Remplacement du bloc écran complet, vitre tactile et dalle ensemble.',l:['Écran testé avant restitution','Pensez à sauvegarder vos données avant le dépôt','Verre trempé posé dans la foulée si vous le souhaitez']},
+    batterie:{w:'Batterie neuve, testée après remplacement.',l:['Souvent le jour même, selon disponibilité de la pièce','Garantie 1 an, facture faisant foi','Pensez à sauvegarder vos données avant le dépôt']},
+    connecteur:{w:'Nettoyage du port ou remplacement du connecteur de charge.',l:['Nettoyage simple si le port est seulement encrassé','Charge vérifiée avant restitution','Garantie 1 an, facture faisant foi']},
+    camera:{w:'Module caméra avant ou arrière remplacé.',l:['Photos et vidéos vérifiées avant restitution','Vitre de caméra remplacée si elle est brisée','Garantie 1 an, facture faisant foi']},
+    son:{w:'Écouteur interne, haut-parleur ou micro remplacé.',l:['Appel test avant restitution','Micro, haut-parleur et écouteur contrôlés','Garantie 1 an, facture faisant foi']},
+    bouton:{w:'Bouton home, volume ou marche/arrêt réparé ou remplacé.',l:['Toutes les commandes testées après réparation','Garantie 1 an, facture faisant foi']},
+    autre:{w:'On identifie la panne et on vous dit si la réparation vaut le coup.',l:['Diagnostic à l’atelier, devis le jour même','Aucune réparation sans votre accord sur le devis','Conseil honnête\u00a0: réparer ou remplacer']}
+  };
+  var sel={brand:'apple',model:'iPhone 13',fault:'ecran',free:''};
+  var brandBox=$('#brand-opts'), modelBox=$('#model-opts'), faultBox=$('#fault-opts'), freeBox=$('#model-free'), freeIn=$('#model-input');
+  function labelOf(list,key){for(var i=0;i<list.length;i++) if(list[i][0]===key) return list[i][1]; return key}
+  function mkOpt(label,on,fn){var b=document.createElement('button');b.type='button';b.className='opt';b.textContent=label;b.setAttribute('aria-pressed',on?'true':'false');b.addEventListener('click',fn);return b}
+  function deviceLabel(){
+    var b=labelOf(BRANDS,sel.brand);
+    if(MODELS[sel.brand]) return /^Autre /.test(sel.model) ? 'iPhone (autre modèle)' : 'Apple '+sel.model;
+    if(!sel.free) return sel.brand==='autre'?'Votre appareil':b;
+    if(sel.brand==='autre') return sel.free;
+    return sel.free.toLowerCase().indexOf(b.toLowerCase())===0 ? sel.free : b+' '+sel.free;
+  }
+  function renderBrands(){brandBox.innerHTML='';BRANDS.forEach(function(x){brandBox.appendChild(mkOpt(x[1],sel.brand===x[0],function(){sel.brand=x[0];sel.model=MODELS[x[0]]?MODELS[x[0]][MODELS[x[0]].length-2]:'';renderBrands();renderModels();renderResult();}))})}
+  function renderModels(){
+    var list=MODELS[sel.brand]; modelBox.innerHTML='';
+    if(list){ freeBox.hidden=true; modelBox.hidden=false; list.forEach(function(m){modelBox.appendChild(mkOpt(m,sel.model===m,function(){sel.model=m;renderModels();renderResult();}))}); }
+    else { modelBox.hidden=true; freeBox.hidden=false; freeIn.value=sel.free; }
+  }
+  function renderFaults(){faultBox.innerHTML='';FAULTS.forEach(function(x){faultBox.appendChild(mkOpt(x[1],sel.fault===x[0],function(){sel.fault=x[0];renderFaults();renderResult();}))})}
+  function renderResult(){
+    var t=FAULT_TXT[sel.fault]||FAULT_TXT.autre;
+    $('#r-title').textContent=deviceLabel()+' · '+labelOf(FAULTS,sel.fault).replace('Autre panne','Diagnostic');
+    $('#r-what').textContent=t.w;
+    var ul=$('#r-list'); ul.innerHTML='';
+    t.l.forEach(function(s){var li=document.createElement('li');li.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span></span>';li.lastChild.textContent=s;ul.appendChild(li)});
+    var dev=$('#f-device'), f=$('#f-fault'); if(dev) dev.value=deviceLabel(); if(f) f.value=sel.fault;
+  }
+  if(brandBox&&modelBox&&faultBox){
+    freeIn.addEventListener('input',function(){sel.free=freeIn.value.trim();renderResult();});
+    renderBrands(); renderModels(); renderFaults(); renderResult();
+  }
+  var recond=$('#recond-ask'); if(recond) recond.addEventListener('click',function(){var f=$('#f-fault'),d=$('#f-device'),m=$('#f-msg'); if(f) f.value='recond'; if(d){d.value='';d.placeholder='Modèle souhaité (ex. iPhone 12, Galaxy S21)';} if(m&&!m.value) m.value='Quels modèles reconditionnés sont disponibles en ce moment ?';});
+
+  /* ---------- Formulaire (démonstration : rien n'est envoyé) ---------- */
+  var form=$('#form'), ok=$('#ok'), err=$('#f-err');
+  if(form){ form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=$('#f-name').value.trim(), phone=$('#f-phone').value.trim(), dev=$('#f-device').value.trim();
+    var miss=[]; if(!name) miss.push('votre nom'); if(!phone) miss.push('un numéro pour vous rappeler'); if(!dev) miss.push('l’appareil');
+    if(miss.length){ err.hidden=false; err.textContent='Il manque '+miss.join(', ')+'.'; return; }
+    err.hidden=true;
+    var fault=$('#f-fault'); var fl=fault.options[fault.selectedIndex].textContent;
+    $('#ok-txt').textContent='Merci '+name+'. Sur le site en ligne, l’atelier vous rappellerait au '+phone+' au sujet de\u00a0: '+(dev?dev+' · ':'')+fl+'.';
+    form.hidden=true; ok.hidden=false; ok.scrollIntoView({block:'nearest'});
+  }); }
+
+  /* ---------- Boutons copier ---------- */
+  $$('.copy').forEach(function(b){ b.addEventListener('click',function(){
+    var v=b.getAttribute('data-copy'), done=function(){b.textContent='Copié';setTimeout(function(){b.textContent='Copier'},1600)};
+    var fallback=function(){ var r=document.createRange(), n=b.parentNode.querySelector('.v'); if(!n) return; r.selectNodeContents(n); var s=getSelection(); s.removeAllRanges(); s.addRange(r); };
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(v).then(done,fallback); } else fallback();
+  }); });
+
+  /* ---------- Téléphone 3D (Three.js r128) ---------- */
+  (function three(){
+    var stage=$('#stage'), canvas=$('#phone3d'), fb=$('#stage-fallback'), legend=$('#legend'), btn=$('#explode'), hint=$('.stage-hint');
+    if(!stage||!canvas) return;
+    var reduced=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var R;
+    try{ if(!window.THREE) throw new Error('three'); R=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true,powerPreference:'high-performance'}); }
+    catch(e){ canvas.hidden=true; fb.hidden=false; if(btn) btn.hidden=true; if(hint) hint.hidden=true; return; }
+    R.setPixelRatio(Math.min(window.devicePixelRatio||1,2)); R.outputEncoding=THREE.sRGBEncoding; R.setClearColor(0x000000,0);
+    var scene=new THREE.Scene(), cam=new THREE.PerspectiveCamera(28,1,.1,100);
+    scene.add(new THREE.HemisphereLight(0xe3ece4,0x0d1411,.85));
+    var key=new THREE.DirectionalLight(0xffffff,1.05); key.position.set(4,7,9); scene.add(key);
+    var fill=new THREE.DirectionalLight(0xc9d8ff,.3); fill.position.set(-6,-2,5); scene.add(fill);
+    var rim=new THREE.PointLight(0x6cc04a,1.6,40); rim.position.set(-7,3,-5); scene.add(rim);
+    var M={
+      body:new THREE.MeshStandardMaterial({color:0x1d2429,metalness:.55,roughness:.38}),
+      glass:new THREE.MeshStandardMaterial({color:0x05080a,metalness:.1,roughness:.18}),
+      inner:new THREE.MeshStandardMaterial({color:0x2a3330,metalness:.3,roughness:.7}),
+      batt:new THREE.MeshStandardMaterial({color:0x3a4541,metalness:.2,roughness:.6}),
+      label:new THREE.MeshStandardMaterial({color:0x6cc04a,roughness:.5}),
+      pcb:new THREE.MeshStandardMaterial({color:0x1f5f38,roughness:.55}),
+      chip:new THREE.MeshStandardMaterial({color:0x0e1214,metalness:.6,roughness:.3}),
+      lens:new THREE.MeshStandardMaterial({color:0x0a1420,metalness:.4,roughness:.1}),
+      ring:new THREE.MeshStandardMaterial({color:0x5a646a,metalness:.8,roughness:.3})
+    };
+    function rrInto(p,w,h,r){var x=-w/2,y=-h/2;p.moveTo(x+r,y);p.lineTo(x+w-r,y);p.quadraticCurveTo(x+w,y,x+w,y+r);p.lineTo(x+w,y+h-r);p.quadraticCurveTo(x+w,y+h,x+w-r,y+h);p.lineTo(x+r,y+h);p.quadraticCurveTo(x,y+h,x,y+h-r);p.lineTo(x,y+r);p.quadraticCurveTo(x,y,x+r,y);return p}
+    function slab(w,h,d,r,mat,bev){var g=new THREE.ExtrudeGeometry(rrInto(new THREE.Shape(),w,h,r),{depth:d,bevelEnabled:!!bev,bevelThickness:bev||0,bevelSize:bev||0,bevelSegments:3,curveSegments:14});g.center();return new THREE.Mesh(g,mat)}
+    function ring(w,h,r,wi,hi,ri,d,mat){var s=rrInto(new THREE.Shape(),w,h,r);s.holes.push(rrInto(new THREE.Path(),wi,hi,ri));var g=new THREE.ExtrudeGeometry(s,{depth:d,bevelEnabled:false,curveSegments:14});g.center();return new THREE.Mesh(g,mat)}
+    var W=2.2,H=4.6, phone=new THREE.Group(); scene.add(phone); var inner=new THREE.Group(); phone.add(inner);
+    var back=slab(W,H,.16,.38,M.body,.04); back.position.z=-.12; inner.add(back);
+    var mid=ring(W,H,.38,W-.16,H-.16,.30,.13,M.body); mid.position.z=.065; inner.add(mid);
+    var tray=slab(W-.2,H-.2,.01,.3,M.inner); tray.position.z=.012; inner.add(tray);
+    var batt=new THREE.Group(); batt.add(new THREE.Mesh(new THREE.BoxGeometry(1.3,2.25,.1),M.batt));
+    var lab=new THREE.Mesh(new THREE.BoxGeometry(.9,.22,.004),M.label); lab.position.set(0,.55,.052); batt.add(lab);
+    batt.position.set(-.28,-.5,.06); inner.add(batt);
+    var board=new THREE.Group(); board.add(new THREE.Mesh(new THREE.BoxGeometry(1.75,1.25,.05),M.pcb));
+    [[-.45,.25,.4,.4],[.3,.3,.5,.3],[-.2,-.3,.35,.25],[.5,-.3,.3,.3]].forEach(function(c){var m=new THREE.Mesh(new THREE.BoxGeometry(c[2],c[3],.06),M.chip);m.position.set(c[0],c[1],.05);board.add(m)});
+    board.position.set(0,1.45,.06); inner.add(board);
+    var screen=new THREE.Group(); screen.add(slab(W-.06,H-.06,.05,.36,M.glass,.01));
+    var uiCanvas=document.createElement('canvas'); uiCanvas.width=560; uiCanvas.height=1240;
+    var tex=new THREE.CanvasTexture(uiCanvas); tex.encoding=THREE.sRGBEncoding; tex.anisotropy=R.capabilities.getMaxAnisotropy();
+    var disp=new THREE.Mesh(new THREE.PlaneGeometry(W-.26,H-.26),new THREE.MeshStandardMaterial({map:tex,emissive:0xffffff,emissiveMap:tex,emissiveIntensity:.95,roughness:.35,transparent:true}));
+    disp.position.z=.0365; screen.add(disp); screen.position.z=.17; inner.add(screen);
+    var camMod=new THREE.Group(); camMod.add(slab(.8,.8,.07,.22,M.body));
+    [[-.17,.17],[.17,-.17]].forEach(function(p){var rg=new THREE.Mesh(new THREE.CylinderGeometry(.19,.19,.05,32),M.ring);rg.rotation.x=Math.PI/2;rg.position.set(p[0],p[1],-.05);camMod.add(rg);var l=new THREE.Mesh(new THREE.CylinderGeometry(.13,.13,.06,32),M.lens);l.rotation.x=Math.PI/2;l.position.set(p[0],p[1],-.06);camMod.add(l)});
+    camMod.position.set(-.55,1.75,-.27); inner.add(camMod);
+    [[1.12,.9,.5],[1.12,.3,.5],[-1.12,.7,.7]].forEach(function(b){var m=new THREE.Mesh(new THREE.BoxGeometry(.05,b[2],.08),M.ring);m.position.set(b[0],b[1],-.1);inner.add(m)});
+    var port=new THREE.Mesh(new THREE.BoxGeometry(.5,.05,.1),M.chip); port.position.set(0,-H/2,-.1); inner.add(port);
+
+    function rrect(x,X,y,w,h,r){x.beginPath();x.moveTo(X+r,y);x.arcTo(X+w,y,X+w,y+h,r);x.arcTo(X+w,y+h,X,y+h,r);x.arcTo(X,y+h,X,y,r);x.arcTo(X,y,X+w,y,r);x.closePath()}
+    function timeStr(){try{return new Intl.DateTimeFormat('fr-FR',{timeZone:'Europe/Paris',hour:'2-digit',minute:'2-digit'}).format(new Date())}catch(e){return '09:41'}}
+    function drawUI(){
+      var c=uiCanvas, x=c.getContext('2d'), w=c.width, h=c.height; x.clearRect(0,0,w,h);
+      x.save(); rrect(x,0,0,w,h,72); x.clip();
+      var g=x.createLinearGradient(0,0,0,h); g.addColorStop(0,'#121c16'); g.addColorStop(1,'#070b09'); x.fillStyle=g; x.fillRect(0,0,w,h);
+      var rg=x.createRadialGradient(w*.5,h*.3,10,w*.5,h*.3,460); rg.addColorStop(0,'rgba(108,192,74,.32)'); rg.addColorStop(1,'rgba(108,192,74,0)'); x.fillStyle=rg; x.fillRect(0,0,w,h);
+      x.textBaseline='middle'; x.fillStyle='#e8efe9'; x.font='600 30px "JetBrains Mono", Menlo, monospace';
+      x.textAlign='left'; x.fillText(timeStr(),54,64); x.textAlign='right'; x.fillText('100 %',w-54,64);
+      x.fillStyle='#000'; rrect(x,w/2-90,24,180,52,26); x.fill();
+      x.fillStyle='#6cc04a'; x.beginPath(); x.arc(w/2,230,66,0,Math.PI*2); x.fill();
+      x.fillStyle='#fff'; rrect(x,w/2-22,190,44,80,9); x.fill();
+      x.fillStyle='#6cc04a'; x.beginPath(); x.arc(w/2,254,4,0,Math.PI*2); x.fill(); rrect(x,w/2-8,198,16,4,2); x.fill();
+      x.textAlign='center'; x.fillStyle='#eef3ee'; x.font='800 54px "Bricolage Grotesque", "Avenir Next", sans-serif'; x.fillText('Diagnostic terminé',w/2,350);
+      x.fillStyle='#9db0a3'; x.font='500 27px "Instrument Sans", system-ui, sans-serif'; x.fillText('Tout fonctionne. Vous pouvez repartir.',w/2,400);
+      var rows=[['Écran','OK'],['Batterie','100 %'],['Connecteur','OK'],['Caméra','OK'],['Haut-parleur','OK'],['Micro','OK']];
+      var y0=480, rh=92;
+      rows.forEach(function(r,i){
+        var y=y0+i*rh; x.fillStyle='rgba(255,255,255,.045)'; rrect(x,44,y,w-88,rh-14,22); x.fill();
+        x.fillStyle='#6cc04a'; x.beginPath(); x.arc(92,y+(rh-14)/2,16,0,Math.PI*2); x.fill();
+        x.strokeStyle='#0d1411'; x.lineWidth=4; x.lineCap='round'; x.lineJoin='round'; x.beginPath(); x.moveTo(84,y+(rh-14)/2); x.lineTo(90,y+(rh-14)/2+6); x.lineTo(101,y+(rh-14)/2-7); x.stroke();
+        x.textAlign='left'; x.fillStyle='#eef3ee'; x.font='600 29px "Instrument Sans", system-ui, sans-serif'; x.fillText(r[0],128,y+(rh-14)/2);
+        x.textAlign='right'; x.fillStyle='#9db0a3'; x.font='500 25px "JetBrains Mono", Menlo, monospace'; x.fillText(r[1],w-76,y+(rh-14)/2);
+      });
+      x.fillStyle='#6cc04a'; rrect(x,44,h-150,w-88,82,41); x.fill();
+      x.textAlign='center'; x.fillStyle='#0d1411'; x.font='700 28px "Instrument Sans", system-ui, sans-serif'; x.fillText('Réparé à Nice · 9 av. G. Clemenceau',w/2,h-109);
+      x.restore(); tex.needsUpdate=true;
+    }
+    drawUI(); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){drawUI();kick();});
+
+    /* Mode vidéo : séquence en boucle (face → ouverture → tour complet des pièces → remontage).
+       Avec prefers-reduced-motion : pas de lecture automatique, un bouton Vue éclatée / assemblée. */
+    var reducedMode=reduced, exploded=false, ex=0, yaw=-.38, pitch=-.08, userY=0, userX=0, velY=0, dragging=false, px=0, py=0;
+    var visible=true, raf=0, clock=new THREE.Clock(), tl=0, playing=true, lastTouch=-10, L=16;
+    function ease(u){return u<.5?2*u*u:1-Math.pow(-2*u+2,2)/2}
+    function seq(t){
+      var A=3.5,B=5,C=13,D=14.5,u;
+      if(t<A) return {ex:0,yaw:-.38+Math.sin(t*.9)*.12,pitch:-.08};
+      if(t<B){u=ease((t-A)/(B-A));return {ex:u,yaw:-.38-u*.77,pitch:-.08-u*.14};}
+      if(t<C){u=(t-B)/(C-B);return {ex:1,yaw:-1.15-u*Math.PI*2,pitch:-.22+Math.sin(u*Math.PI*2)*.07};}
+      if(t<D){u=ease((t-C)/(D-C));return {ex:1-u,yaw:-1.15-Math.PI*2+u*.77,pitch:-.22+u*.14};}
+      u=(t-D)/(L-D); return {ex:0,yaw:-.38-Math.PI*2+Math.sin((t-D)*.9)*.12*(1-u),pitch:-.08};
+    }
+    function setBtn(){
+      if(reducedMode){btn.textContent=exploded?'Vue assemblée':'Vue éclatée';btn.setAttribute('aria-pressed',exploded?'true':'false');btn.setAttribute('aria-label',exploded?'Revenir à la vue assemblée':'Afficher la vue éclatée');}
+      else{btn.textContent=playing?'Pause':'Lecture';btn.setAttribute('aria-pressed',playing?'false':'true');btn.setAttribute('aria-label',playing?'Mettre l’animation en pause':'Relancer l’animation');}
+    }
+    btn.addEventListener('click',function(){ if(reducedMode) exploded=!exploded; else playing=!playing; setBtn(); kick(); });
+    setBtn();
+    canvas.addEventListener('pointerdown',function(e){dragging=true;px=e.clientX;py=e.clientY;velY=0;lastTouch=clock.getElapsedTime();try{canvas.setPointerCapture(e.pointerId)}catch(_){}});
+    canvas.addEventListener('pointermove',function(e){if(!dragging)return;var dx=e.clientX-px,dy=e.clientY-py;px=e.clientX;py=e.clientY;userY+=dx*.008;userX=Math.max(-.6,Math.min(.6,userX+dy*.005));velY=dx*.008;lastTouch=clock.getElapsedTime();kick();});
+    function up(){dragging=false;lastTouch=clock.getElapsedTime();} canvas.addEventListener('pointerup',up); canvas.addEventListener('pointercancel',up); canvas.addEventListener('lostpointercapture',up);
+    function lerp(o,t,k){return o+(t-o)*k}
+    function frame(){
+      raf=0; var dt=Math.min(clock.getDelta(),.1), t=clock.getElapsedTime(), k=1-Math.exp(-dt*6);
+      if(!dragging){userY+=velY;velY*=.9;}
+      var idle=t-lastTouch>2.5;
+      if(reducedMode){
+        ex=lerp(ex,exploded?1:0,k); yaw=lerp(yaw,exploded?-1.15:-.38,k); pitch=lerp(pitch,exploded?-.22:-.08,k);
+      } else {
+        if(playing&&!dragging&&idle){ tl=(tl+dt)%L; var d=Math.min(1,dt*1.2); userY*=1-d; userX*=1-d; }
+        var sq=seq(tl); ex=lerp(ex,sq.ex,Math.min(1,k*2)); yaw=sq.yaw; pitch=sq.pitch;
+      }
+      phone.rotation.y=yaw+userY; phone.rotation.x=pitch+userX; phone.position.y=reducedMode?0:Math.sin(t*.8)*.05;
+      inner.position.z=-ex*1.05;
+      screen.position.z=.17+ex*2.03; batt.position.z=.06+ex*.84; board.position.z=.06+ex*1.39;
+      batt.position.y=-.5+ex*Math.sin(t*1.3)*.04; board.position.y=1.45+ex*Math.sin(t*1.1+1)*.04;
+      legend.classList.toggle('on',ex>.5);
+      R.render(scene,cam);
+      var keep=dragging||!idle||Math.abs(velY)>.0005||(reducedMode?Math.abs(ex-(exploded?1:0))>.002:playing);
+      if(visible && !document.hidden && keep) raf=requestAnimationFrame(frame);
+    }
+    function kick(){ if(!raf && visible && !document.hidden) raf=requestAnimationFrame(frame); }
+    function resize(){ var w=stage.clientWidth,h=stage.clientHeight; if(!w||!h) return; R.setSize(w,h,false); cam.aspect=w/h; cam.position.set(0,.15,Math.max(12.4,7.6/(w/h))); cam.lookAt(0,0,0); cam.updateProjectionMatrix(); kick(); }
+    if(window.ResizeObserver) new ResizeObserver(resize).observe(stage); else window.addEventListener('resize',resize);
+    if(window.IntersectionObserver) new IntersectionObserver(function(en){visible=en[0].isIntersecting;kick();},{threshold:.02}).observe(stage);
+    document.addEventListener('visibilitychange',kick);
+    resize(); kick();
+  })();
+})();
+</script>
+
+</body>
+</html>
